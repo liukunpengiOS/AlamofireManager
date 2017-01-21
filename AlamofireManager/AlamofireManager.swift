@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-struct AlamofireManager {
+class AlamofireManager {
     
     //MARK: Get
     func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) ->Void)) {
