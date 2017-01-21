@@ -12,7 +12,7 @@ import Alamofire
 class AlamofireManager {
     
     //MARK: Get
-    func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) ->Void)) {
+   public func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) -> Void)) {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {(response) in
                             
                             guard response.result.isSuccess else{
@@ -24,7 +24,7 @@ class AlamofireManager {
     }
     
     //MARK: Post
-    func post(url: URLConvertible, parameters: Parameters,completion: @escaping((DataResponse<Any>) ->Void)) {
+   public func post(url: URLConvertible, parameters: Parameters,completion: @escaping((DataResponse<Any>) ->Void)) {
         Alamofire.request(url, method: .post, parameters: parameters).responseJSON {(response) in
                             
                             guard response.result.isSuccess else{
@@ -36,7 +36,7 @@ class AlamofireManager {
     }
     
     //MARK: Uploading data
-    func uploadData(url: URLConvertible, image: UIImage) {
+   public func uploadData(url: URLConvertible, image: UIImage) {
         
          let imageData = UIImagePNGRepresentation(image)!
         Alamofire.upload(imageData, to: url).responseJSON { (response) in
