@@ -8,11 +8,13 @@
 import UIKit
 import Alamofire
 
-open class AlamofireManager {
+open class AlamofireManager: NSObject {
     
-    private init () {}
-    open var manager = AlamofireManager()
-   
+    let manager = AlamofireManager()
+    open class var share : AlamofireManager {
+        return manager
+    }
+
     //MARK: Get
     public func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) -> Void)) {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {(response) in
