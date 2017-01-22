@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = 'AlamofireManager'
-s.version      = '0.0.5'
+s.version      = '0.0.6'
 s.summary      = 'A simple manager class that use Alamofire request somedata from server'
 s.homepage     = 'https://github.com/liukunpengiOS/AlamofireManager'
 s.license      = 'MIT'

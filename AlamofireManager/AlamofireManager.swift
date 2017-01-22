@@ -8,8 +8,10 @@
 import UIKit
 import Alamofire
 
-open class AlamofireManager {
+public class AlamofireManager {
 
+    static let manager = AlamofireManager()
+    private init () {}
     //MARK: Get
    public func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) -> Void)) {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {(response) in
