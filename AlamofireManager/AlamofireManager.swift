@@ -1,6 +1,5 @@
 //
-//  NetworkHandler.swift
-//  SqliteSwift
+//  AlamofireManager.swift
 //
 //  Created by kunpeng on 2016/12/7.
 //  Copyright © 2016年 liukunpeng. All rights reserved.
@@ -9,8 +8,8 @@
 import UIKit
 import Alamofire
 
-public class AlamofireManager {
-    
+open class AlamofireManager {
+
     //MARK: Get
    public func get(url:URLConvertible,parameters: Parameters,completion: @escaping((DataResponse<Any>) -> Void)) {
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON {(response) in
