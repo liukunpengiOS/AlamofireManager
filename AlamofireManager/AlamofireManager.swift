@@ -9,10 +9,9 @@ import UIKit
 import Alamofire
 
 open class AlamofireManager: NSObject {
-    
-    let manager = AlamofireManager()
-    open class var share : AlamofireManager {
-        return manager
+
+    override init() {
+        super.init()
     }
 
     //MARK: Get
